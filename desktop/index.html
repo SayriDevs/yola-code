@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLA Code</title>
+  <style>
+    /* Tema del YOLA OS (dark) — el MISMO contrato visual que en el OS */
+    :root {
+      --bg-desktop: #1a1a2e;
+      --bg-taskbar: #16213ed9;
+      --bg-taskbar-hover: rgba(255,255,255,0.08);
+      --bg-window: #1e1e3a;
+      --bg-window-header: #0f3460;
+      --bg-start-menu: #16213e;
+      --bg-icon-hover: rgba(255,255,255,0.08);
+      --bg-overlay: rgba(0,0,0,0.4);
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0b0;
+      --text-muted: #606070;
+      --syntax-keyword: #c678dd;
+      --syntax-string: #98c379;
+      --syntax-comment: #7f848e;
+      --syntax-number: #d19a66;
+      --syntax-function: #61afef;
+      --syntax-punct: #e06c75;
+      --border-window: #2a2a4a;
+      --accent: #4fc3f7;
+      --danger: #ef5350;
+      --success: #66bb6a;
+      --warning: #ffa726;
+      --shadow: 0 8px 32px rgba(0,0,0,0.4);
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+      --radius: 8px;
+      --radius-sm: 4px;
+      --taskbar-height: 48px;
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --transition: 0.2s ease;
+      --ui-scale: 1;
+    }
+    html, body {
+      height: 100%; margin: 0; overflow: hidden;
+      background: var(--bg-window);
+      color: var(--text-primary);
+      font-family: var(--font);
+    }
+    #app { height: 100vh; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: var(--border-window); border-radius: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
