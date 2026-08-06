@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLA Code — dev</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #app { height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    // Entorno de desarrollo aislado: monta YOLA Code con un api simulado
+    // (el OS real inyecta el api real al importar el bundle).
+    import { createApp } from './src/index.js'
+    import { render } from 'solid-js/web'
+
+    const mockApi = {
+      window: { setTitle: (t) => { document.title = t || 'YOLA Code' } },
+      os: {
+        notify: (msg, type) => console.log(`[notify ${type}] ${msg}`),
+        openApp: (id) => console.log(`[openApp] ${id}`),
+        getApps: () => [{ id: 'yola-code', manifest: { id: 'yola-code', name: 'YOLA Code', version: '0.8.0' } }],
+      },
+      params: {},
+    }
+
+    const Comp = createApp(mockApi)
+    render(() => <Comp />, document.getElementById('app'))
+  </script>
+</body>
+</html>

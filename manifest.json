@@ -1,0 +1,17 @@
+{
+  "id": "yola-code",
+  "name": "YOLA Code",
+  "author": "YOLA",
+  "repo": "github.com/SayriDevs/yola-code",
+  "icon": "🧑‍💻",
+  "category": "Dev",
+  "description": "IDE nativo de YOLA OS. Monaco Editor (engine de VS Code), xterm.js, FileTree, agente integrado y templates para crear apps y agentes con un clic.",
+  "version": "0.8.0",
+  "entry": "dist/app.js",
+  "singleton": true,
+  "permissions": [
+    "notify",
+    "openApp",
+    "files"
+  ]
+}
