@@ -1,5 +1,5 @@
 // ── YOLA Code — Terminal integrada (Ctrl+`) ──────────────────
-// Ejecuta comandos locales vía POST /api/v1/terminal/exec del bridge
+// Ejecuta comandos locales vía POST /api/v1/terminal/exec del daemon
 // (cmd /C en Windows). cwd = workspace activo. Historial con ↑↓,
 // Ctrl+L limpia. Sin streaming (fase 2) — ejecuta y muestra.
 // ──────────────────────────────────────────────────────────────

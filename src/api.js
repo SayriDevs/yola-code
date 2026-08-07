@@ -69,7 +69,7 @@ export function hasFilesApi(api) {
 }
 
 /**
- * filesApi PROPIO de YolaCode — habla el contrato REAL del bridge
+ * filesApi PROPIO de YolaCode — habla el contrato REAL del daemon
  * (verificado en disco): GET /api/v1/files?directory&path, NO
  * /files/list (ruta inexistente → 404 sin ACAO → el browser lo reporta
  * como CORS). Así YolaCode funciona igual en el OS y en el .exe, sin
@@ -89,7 +89,7 @@ export function buildYolaFilesApi(daemonUrl) {
       const res = await fetch(`${base}/files${q({ directory, path })}`)
       if (!res.ok) throw new Error(`files HTTP ${res.status}`)
       const data = await res.json()
-      // el bridge devuelve { entries: [...] } — NUNCA asumir un formato sin
+      // el daemon devuelve { entries: [...] } — NUNCA asumir un formato sin
       // verificar (esto enmascaró el bug como "Vacío" silencioso)
       if (Array.isArray(data)) return data
       if (Array.isArray(data?.entries)) return data.entries

@@ -10,11 +10,15 @@
     "windows": [
       {
         "title": "YOLA Code",
-        "width": 1000,
-        "height": 680,
-        "minWidth": 640,
-        "minHeight": 400,
-        "additionalBrowserArgs": "--allow-running-insecure-content"
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 500,
+        "resizable": true,
+        "decorations": true,
+        "label": "main",
+        "visible": false,
+        "devtools": true
       }
     ],
     "security": {
@@ -24,7 +28,14 @@
   "bundle": {
     "active": true,
     "targets": ["nsis", "msi"],
-    "resources": ["resources/daemon/yola-bridge.exe"],
-    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico"]
+    "resources": [
+      "yola-daemon.exe"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ]
   }
 }

@@ -20,7 +20,7 @@ import { loadLocalWorkspaces, saveLocalWorkspaces, fetchOsWorkspaces, mergeWorks
 export function createApp(api) {
   return function YolaCodeWindow() {
     const hasFiles = hasFilesApi(api)
-    // filesApi PROPIO con el contrato real del bridge — YolaCode no
+    // filesApi PROPIO con el contrato real del daemon — YolaCode no
     // depende del filesApi del anfitrión (el del OS usa /files/list,
     // ruta inexistente → 404 sin ACAO → "CORS blocked" engañoso)
     const filesApi = hasFiles ? buildYolaFilesApi(api.os.daemonUrl) : null

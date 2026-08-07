@@ -1,4 +1,4 @@
-// ── YOLA Code — Mini-cliente del contrato del agente (bridge) ──
+// ── YOLA Code — Mini-cliente del contrato del agente (daemon) ──
 // Mismo contrato que yola-client-ts (usado por el Chat del OS):
 //   POST   /api/v1/sessions               → crea sesión
 //   GET    /api/v1/sessions               → lista sesiones
