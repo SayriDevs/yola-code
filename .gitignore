@@ -3,3 +3,4 @@ dist/
 .vite/
 *.local
 src-tauri/target/
+src-tauri/yola-daemon.exe
